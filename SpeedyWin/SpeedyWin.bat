@@ -2,7 +2,7 @@
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo           SpeedyWin Installer
 echo                          v1.0
-echo               David Mihai
+echo           DavidPrograms
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Welcome to SpeedyWin! What Will you do?
 echo Install SpeedyWin [Y]
