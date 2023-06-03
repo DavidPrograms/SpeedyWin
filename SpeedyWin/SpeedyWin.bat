@@ -19,7 +19,7 @@ choice /n /c YN /m "" & if errorlevel 2 exit)
 cls
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Instalation will be in this location
-echo C:\SpeedyWin\*
+echo C:\SpeedyWin
 echo THIS CANNOT BE CHANGED
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo OK [Any key]
@@ -397,20 +397,17 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Ad
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSuperHidden" /t REG_DWORD /d 1 /f
 
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
-cls
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Done Tweaking!
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Uninstalling Apps...
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=
-powershell.exe -ExecutionPolicy Bypass -File Debloat.ps1
-cls
+powershell.exe -ExecutionPolicy Bypass -File C:\SpeedyWin\Debloat.ps1
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Installing Chrome... [App Installer Req.] [Internet Req.] (winget)
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-echo Please Accept The EULA (winget)
+echo Please Accept The EULA [IF NEED] (winget)
 winget install Google.Chrome
-cls
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Installing XBOX... [App Installer Req.] [Internet Req.] (winget)
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -421,7 +418,6 @@ winget install Microsoft.XboxGamingOverlay_8wekyb3d8bbwe
 winget install Microsoft.XboxGameOverlay_8wekyb3d8bbwe
 winget install Microsoft.XboxSpeechToTextOverlay_8wekyb3d8bbwe
 winget install Microsoft.XboxApp_8wekyb3d8bbwe
-cls
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo SpeedyWin Has Been Installed!
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -433,6 +429,7 @@ echo Delete SpeedyWin Temp?
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Yes [Y]
 echo No, Exit App [N]
-choice /n /c YN /m "" & if errorlevel 2 exit)
+choice /n /c YN /m "" & if errorlevel 2 shutdown -r -t 0)
+shutdown -r -t 5
 rmdir /s /q C:\SpeedyWin
 exit
