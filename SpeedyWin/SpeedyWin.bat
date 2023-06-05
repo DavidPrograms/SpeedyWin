@@ -21,7 +21,7 @@ echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Instalation will be in this location
 echo C:\SpeedyWin
 echo THIS CANNOT BE CHANGED
-echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo OK [Any key]
 pause >nul
 cls
@@ -402,7 +402,7 @@ echo Done Tweaking!
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Uninstalling Apps...
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=
-powershell.exe -ExecutionPolicy Bypass -File C:\SpeedyWin\Debloat.ps1
+powershell -ExecutionPolicy Unrestricted -File C:\SpeedyWin\Debloat.ps1
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo Installing Chrome... [App Installer Req.] [Internet Req.] (winget)
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
